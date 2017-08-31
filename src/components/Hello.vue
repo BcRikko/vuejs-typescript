@@ -21,13 +21,14 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+import Vue from 'vue'
+import Component from 'vue-class-component'
+
+@Component({
+  name: 'hello'
+})
+export default class Hello extends Vue {
+  msg = 'Welcome to Your Vue.js App'
 }
 </script>
 
