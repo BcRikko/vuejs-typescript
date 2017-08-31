@@ -1,18 +1,28 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view></router-view>
+    <router-view propsMessage="vue-router"></router-view>
+    <hello
+      propsMessage="hello tag"
+      clickEvent="clicked"
+      @clicked="showChildMessage">
+    </hello>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
+import Hello from './components/Hello.vue'
 
 @Component({
-  name: 'app'
+  name: 'app',
+  components: { Hello }
 })
 export default class App extends Vue {
+  showChildMessage (val: string) {
+    alert(val + ' from child')
+  }
 }
 </script>
 
