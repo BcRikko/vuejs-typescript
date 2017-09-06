@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view propsMessage="vue-router"></router-view>
-    <hello
+    <!-- <hello
       propsMessage="hello tag"
       clickEvent="clicked"
       @clicked="showChildMessage">
-    </hello>
+    </hello> -->
   </div>
 </template>
 
